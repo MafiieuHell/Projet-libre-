@@ -26,8 +26,62 @@ const objetsMangas = [
     { id: 25, img: "./image/R.jpg", name: "Inconnu " },
 ]
 
-function test(str) {
-    for (var i = 0; i < 10; i++) {
-        i--
-    }
+const getManga = () => {
+    objetsMangas.map(manga => document.getElementById("input").innerHTML +=
+        `      
+        <li> <h1>${manga.name}</h1> < /li> 
+        <li><img src="${manga.img}" alt="img${manga.id}"></li>
+        <p>${manga.description}</p>
+    `
+
+
+    )
 }
+getManga()
+
+
+// let input = document.getElementById("input")
+// input.addEventListener("keypress", function() {
+//     var boruto = objetsMangas.filter(manga => manga.name === "Boruto")
+//     var inconnu = objetsMangas.filter(manga => manga.name === "inconnu")
+//     var dbz = objetsMangas.filter(manga => manga.name === "Dbz")
+//     var myHero = objetsMangas.filter(manga => manga.name === "My hero accadémia")
+//     var bleach = objetsMangas.filter(manga => manga.name === "Bleach")
+//     var onePiece = objetsMangas.filter(manga => manga.name === "One pièce")
+//     var Inconnu = objetsMangas.filter(manga => manga.name === "Inconnu")
+//     var one = objetsMangas.filter(manga => manga.name === "One")
+// })
+
+
+
+// let nom = document.getElementById("image").value;
+
+// switch (nom) {
+//     case 'boruto':
+//         document.write(boruto)
+//         break;
+//     case 'inconnu':
+//         document.write(inconnu)
+//         break;
+//     case 'dbz':
+//         document.write(dbz)
+//         break;
+//     case 'myHero':
+//         document.write(myHero)
+//         break;
+//     case 'bleach':
+//         document.write(bleach)
+//         break;
+//     case 'onePiece':
+//         document.write(onePiece)
+//         break;
+//     case 'Inconnu':
+//         document.write(Inconnu)
+//         break;
+//     case 'one':
+//         document.write(one)
+//         break;
+
+//     default:
+//         document.write("not found")
+// }
