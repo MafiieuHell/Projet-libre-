@@ -1,17 +1,14 @@
-const objetsMangas = [
-    {
+const objetsMangas = [{
         id: 1,
         img: "./image/4c6ee25042b014561effb42bad9269a9.jpg",
         name: "Boruto",
-        description:
-            "Boruto est le fils aîné de Naruto et d' Hinata. Il est également le grand frère d' Himawari, qu'il adore. Il fait équipe avec Sarada et Mitsuki. Son professeur est Konohamaru.",
+        description: "Boruto est le fils aîné de Naruto et d' Hinata. Il est également le grand frère d' Himawari, qu'il adore. Il fait équipe avec Sarada et Mitsuki. Son professeur est Konohamaru.",
     },
     {
         id: 2,
         img: "./image/1008181.jpg",
         name: "One pièce",
-        description:
-            "One Piece est un manga japonais écrit et illustré par Eiichiro Oda. Il est publié en feuilleton dans le magazine de manga shōnen de Shueisha Weekly Shōnen Jump depuis juillet 1997, avec ses chapitres individuels compilés en 99 volumes tankōbon en juin 2021.",
+        description: "One Piece est un manga japonais écrit et illustré par Eiichiro Oda. Il est publié en feuilleton dans le magazine de manga shōnen de Shueisha Weekly Shōnen Jump depuis juillet 1997, avec ses chapitres individuels compilés en 99 volumes tankōbon en juin 2021.",
     },
     { id: 3, img: "./image/1495292642.jpg", name: "inconnu" },
     { id: 4, img: "./image/R (1).jpg", name: "inconnu" },
@@ -28,22 +25,19 @@ const objetsMangas = [
         id: 14,
         img: "./image/R (11).jpg",
         name: "Dbz",
-        description:
-            "Dragon Ball Z, abréviation commune DBZ) est une série télévisée d'animation japonaise adaptée de la franchise d' Akira Toriyama et produite par la Toei Animation. Il s'agit de la suite de Dragon Ball.",
+        description: "Dragon Ball Z, abréviation commune DBZ) est une série télévisée d'animation japonaise adaptée de la franchise d' Akira Toriyama et produite par la Toei Animation. Il s'agit de la suite de Dragon Ball.",
     },
     {
         id: 15,
         img: "./image/R (12).jpg",
         name: "Dbz",
-        description:
-            "Dragon Ball Z, abréviation commune DBZ) est une série télévisée d'animation japonaise adaptée de la franchise d' Akira Toriyama et produite par la Toei Animation. Il s'agit de la suite de Dragon Ball.",
+        description: "Dragon Ball Z, abréviation commune DBZ) est une série télévisée d'animation japonaise adaptée de la franchise d' Akira Toriyama et produite par la Toei Animation. Il s'agit de la suite de Dragon Ball.",
     },
     {
         id: 16,
         img: "./image/R (13).jpg",
         name: "Boruto",
-        description:
-            "Boruto est le fils aîné de Naruto et d' Hinata. Il est également le grand frère d' Himawari, qu'il adore. Il fait équipe avec Sarada et Mitsuki. Son professeur est Konohamaru.",
+        description: "Boruto est le fils aîné de Naruto et d' Hinata. Il est également le grand frère d' Himawari, qu'il adore. Il fait équipe avec Sarada et Mitsuki. Son professeur est Konohamaru.",
     },
     { id: 17, img: "./image/R (14).jpg", name: "My hero accadémia" },
     { id: 18, img: "./image/R (15).jpg", name: "My hero accadémia" },
@@ -55,21 +49,74 @@ const objetsMangas = [
         id: 23,
         img: "./image/wallpapersden.com_one-piece-team-art_2560x1080.jpg",
         name: "One pièce",
-        description:
-            "One Piece est un manga japonais écrit et illustré par Eiichiro Oda. Il est publié en feuilleton dans le magazine de manga shōnen de Shueisha Weekly Shōnen Jump depuis juillet 1997, avec ses chapitres individuels compilés en 99 volumes tankōbon en juin 2021.",
+        description: "One Piece est un manga japonais écrit et illustré par Eiichiro Oda. Il est publié en feuilleton dans le magazine de manga shōnen de Shueisha Weekly Shōnen Jump depuis juillet 1997, avec ses chapitres individuels compilés en 99 volumes tankōbon en juin 2021.",
     },
     {
         id: 24,
         img: "./image/wallpapersden.com_one-piece-team-art_2560x1080.jpg",
         name: "One pièce",
-        description:
-            "One Piece est un manga japonais écrit et illustré par Eiichiro Oda. Il est publié en feuilleton dans le magazine de manga shōnen de Shueisha Weekly Shōnen Jump depuis juillet 1997, avec ses chapitres individuels compilés en 99 volumes tankōbon en juin 2021.",
+        description: "One Piece est un manga japonais écrit et illustré par Eiichiro Oda. Il est publié en feuilleton dans le magazine de manga shōnen de Shueisha Weekly Shōnen Jump depuis juillet 1997, avec ses chapitres individuels compilés en 99 volumes tankōbon en juin 2021.",
     },
     { id: 25, img: "./image/R.jpg", name: "Inconnu " },
 ];
 
-function test(str) {
-    for (var i = 0; i < 10; i++) {
-        i--;
-    }
-}
+
+const getManga = () => {
+        objetsMangas.map(manga => document.getElementById("input").innerHTML +=
+            `      
+        <li> <h1>${manga.name}</h1> < /li> 
+        <li><img src="${manga.img}" alt="img${manga.id}"></li>
+        <p>${manga.description}</p>
+    `
+
+
+        )
+
+        getManga()
+
+
+        // let input = document.getElementById("input")
+        // input.addEventListener("keypress", function() {
+        //     var boruto = objetsMangas.filter(manga => manga.name === "Boruto")
+        //     var inconnu = objetsMangas.filter(manga => manga.name === "inconnu")
+        //     var dbz = objetsMangas.filter(manga => manga.name === "Dbz")
+        //     var myHero = objetsMangas.filter(manga => manga.name === "My hero accadémia")
+        //     var bleach = objetsMangas.filter(manga => manga.name === "Bleach")
+        //     var onePiece = objetsMangas.filter(manga => manga.name === "One pièce")
+        //     var Inconnu = objetsMangas.filter(manga => manga.name === "Inconnu")
+        //     var one = objetsMangas.filter(manga => manga.name === "One")
+        // })
+
+
+
+        // let nom = document.getElementById("image").value;
+
+        // switch (nom) {
+        //     case 'boruto':
+        //         document.write(boruto)
+        //         break;
+        //     case 'inconnu':
+        //         document.write(inconnu)
+        //         break;
+        //     case 'dbz':
+        //         document.write(dbz)
+        //         break;
+        //     case 'myHero':
+        //         document.write(myHero)
+        //         break;
+        //     case 'bleach':
+        //         document.write(bleach)
+        //         break;
+        //     case 'onePiece':
+        //         document.write(onePiece)
+        //         break;
+        //     case 'Inconnu':
+        //         document.write(Inconnu)
+        //         break;
+        //     case 'one':
+        //         document.write(one)
+        //         break;
+
+        //     default:
+        //         document.write("not found")
+        // }
