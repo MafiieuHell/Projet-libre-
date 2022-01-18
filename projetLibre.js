@@ -64,7 +64,7 @@ const objetsMangas = [{
 const getManga = () => {
     objetsMangas.map(manga => document.getElementById("image").innerHTML +=
         `      
-        <li> <h1>${manga.name}</h1> < /li> 
+        <li> <h1>${manga.name}</h1> </li> 
         <li><img src="${manga.img}" alt="img${manga.id}"></li>
         <p>${manga.description}</p>
     `
