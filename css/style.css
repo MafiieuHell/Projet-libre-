@@ -1,3 +1,7 @@
 html {
 	background: linear-gradient(cyan, blue);
 }
+
+img {
+	max-width: 40em;
+}
