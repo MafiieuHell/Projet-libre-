@@ -5,3 +5,18 @@ html {
 img {
 	max-width: 40em;
 }
+
+header div img {
+	float: left;
+    margin-right: 1rem;
+	max-width: 25rem;
+}
+
+header div h1 {
+	text-align: center;
+}
+
+footer {
+	background-image: url(../img_footer.png);
+    background-size: cover;
+}
