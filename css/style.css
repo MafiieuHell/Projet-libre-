@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -74,8 +73,6 @@ svg:hover circle {
 
 
 /*=================================== mixitup ===========================*/
-
-
 
 .mix-container {
     display: flex;
