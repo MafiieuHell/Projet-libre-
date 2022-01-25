@@ -1,3 +1,100 @@
-html {
-	background: linear-gradient(cyan, blue);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lavender;
+    font-family: sans-serif;
+    color: #7c7ca1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 70%;
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 7px 20px 0px #b7b4b4;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+.button {
+    border: 1px solid transparent;
+    padding: 10px 15px;
+    color: #7c7ca1;
+    background-color: lavender;
+    font-weight: bold;
+    font-size: 20px;
+    outline: none;
+}
+
+.button:focus {
+    border-color: inherit;
+}
+
+
+/*=================================== svg ===============================*/
+
+svg circle {
+    fill: red;
+    transition: all 0.7s ease;
+}
+
+svg:hover circle {
+    fill: yellow;
+    transform: scale(1.2);
+}
+
+
+
+/*=================================== slick =============================*/
+
+.slick-prev:before,
+.slick-next:before {
+    color: red;
+    font-size: 30px;
+}
+
+
+.slick-dots li button::before {
+    font-size: 16px;
+}
+
+
+/*=================================== mixitup ===========================*/
+
+
+
+.mix-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mix-button {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.mix {
+    width: calc(33% - 2em);
+    margin: 1em;
+    border: 1px solid lavender;
+    padding: 8px;
+}
+
+.mix img {
+    display: block;
 }
