@@ -1,0 +1,15 @@
+.dropdown {
+    display: flex;
+    justify-content: flex-start;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#cart {
+    background-color: #4c4343;
+    color: white;
+    width: max-content;
+    text-align: right;
+    padding: 0 1rem;
+}

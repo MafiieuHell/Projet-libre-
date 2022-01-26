@@ -9,13 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Athiti&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600;700&display=swap" rel="stylesheet">
+
   <script src="https://kit.fontawesome.com/ec622c12e9.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/panier.css">
+  <link rel="stylesheet" href="css/mon.css">
   <link rel="stylesheet" href="css/Normalize.css">
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
-  <link rel="stylesheet" href="css/mon.css">
+
   <link rel="shortcut icon" href="ressources/images/favicon.png">
-  <title>reso</title>
+  <title>Freshly</title>
 </head>
 
 <body>
@@ -32,6 +36,16 @@
           <li><a href="">Contact</a></li>
         </ul>
       </nav>
+    </div>
+    <div class="dropdown">
+      <div id="cart">
+        <p><span id="in-cart-items-num">0</span> Articles
+        <p>
+      </div>
+      <ul id="cart-dropdown" hidden>
+        <li id="empty-cart-msg"><a href="/panier/">Votre panier est vide</a></li>
+        <li class="go-to-cart hidden"><a href="/panier/">Voir le panier</a></li>
+      </ul>
     </div>
   </header>
   <main class="container">
@@ -51,12 +65,20 @@
       <article>
         <h2>Welcome to Freshly Restaurant</h2>
         <img src="ressources/images/location.jpg" alt="location" class="droite">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam molestias, esse fugiat obcaecati dolorum numquam repellendus eligendi qui modi dignissimos quae sint optio eveniet. Aperiam accusamus, quae assumenda voluptatem quasi
-          similiquemolestias, esse fugiat obcaecati dolorum numquam repellendus eligendi qui modi dignissimos quae sint optio eveniet. Aperiam accusamus, quae assumenda voluptatem quasi similique
-          atque, iusto perspiciatis harum, excepturi odit asperiores quas ipsa expedita reiciendis repellendus modi voluptate quo, eum sequi molestias aliquid!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit adipisci maiores consectetur quae illum! Eius officiis reiciendis, voluptate laborum sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia omnis culpa,
-          remmolestias, esse fugiat obcaecati dolorum numquam repellendus eligendi qui modi dignissimos quae sint optio eveniet. Aperiam accusamus, quae assumenda voluptatem quasi similique
-          aspernatur cumque, voluptatum, porro illo non pariatur ut tempore sed autem aliquam. Dicta alias vel laborum. Numquam, explicabo.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam molestias, esse fugiat obcaecati dolorum
+          numquam repellendus eligendi qui modi dignissimos quae sint optio eveniet. Aperiam accusamus, quae assumenda
+          voluptatem quasi
+          similiquemolestias, esse fugiat obcaecati dolorum numquam repellendus eligendi qui modi dignissimos quae sint
+          optio eveniet. Aperiam accusamus, quae assumenda voluptatem quasi similique
+          atque, iusto perspiciatis harum, excepturi odit asperiores quas ipsa expedita reiciendis repellendus modi
+          voluptate quo, eum sequi molestias aliquid!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit adipisci maiores consectetur quae illum!
+          Eius officiis reiciendis, voluptate laborum sed. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Officia omnis culpa,
+          remmolestias, esse fugiat obcaecati dolorum numquam repellendus eligendi qui modi dignissimos quae sint optio
+          eveniet. Aperiam accusamus, quae assumenda voluptatem quasi similique
+          aspernatur cumque, voluptatum, porro illo non pariatur ut tempore sed autem aliquam. Dicta alias vel laborum.
+          Numquam, explicabo.</p>
         <div class="clear"></div>
 
       </article>
@@ -65,6 +87,7 @@
         <div class="menu">
           <div class="plat">
             <h3>Meat menu</h3>
+            <h4>12.90</h4>
             <figure class="abs">
               <img src="ressources/images/meat-menu.jpg" alt="meat menu">
               <figcaption>
@@ -85,10 +108,15 @@
               <li>Lorem ipsum dolor sit.</li>
 
             </ul>
-            <a href=""><img class="svg" src="ressources/images/fork-knife.svg" alt="">See more</a>
+            <label for="q-meat">Quantité :</label>
+            <input id="qt-meat" type="number" name="q-meat" min="0" max="99">
+            <button type="button" class="add-to-cart" data-id="002" data-name="Meat" data-price="12,90"><img class="svg"
+                src="ressources/images/fork-knife.svg">Ajouter au panier</button>
           </div>
+
           <div class="plat">
             <h3>Fish menu</h3>
+            <h4>11.90</h4>
             <!-- <div class="bordure"> -->
             <figure class="abs">
               <img src="ressources/images/fish-menu.jpg" alt="">
@@ -110,10 +138,15 @@
               <li>Lorem ipsum dolor sit.</li>
 
             </ul>
-            <a href=""><img class="svg" src="ressources/images/fork-knife.svg" alt="">See more</a>
+            <label for="q-fish">Quantité :</label>
+            <input id="qt-fish" type="number" name="q-fish" min="0" max="99">
+            <button type="button" class="add-to-cart" data-id="001" data-name="Fish" data-price="11,90"><img class="svg"
+                src="ressources/images/fork-knife.svg">Ajouter au panier</button>
           </div>
+
           <div class="plat">
             <h3>Vegetarian menu</h3>
+            <h4>9.90</h4>
             <figure class="abs">
               <img src="ressources/images/vegetarian-menu.jpg" alt="">
               <figcaption>
@@ -134,7 +167,10 @@
               <li>Lorem ipsum dolor sit.</li>
 
             </ul>
-            <a href=""><img class="svg" src="ressources/images/fork-knife.svg" alt="">See more</a>
+            <label for="q-vege">Quantité :</label>
+            <input id="qt-vege" type="number" name="q-vege" min="0" max="99">
+            <button type="button" class="add-to-cart" ddata-id="003" data-name="Vegetarian" data-price="9,90"><img
+                class="svg" src="ressources/images/fork-knife.svg">Ajouter au panier</button>
           </div>
         </div>
       </article>
@@ -174,11 +210,15 @@
 
     </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
   <script src="vendor/slick/slick.min.js"></script>
   <script src="vendor/mixitup/mixitup.min.js"></script>
   <script src="vendor/fancy-box/jquery.fancybox.min.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/panier.js"></script>
 </body>
 
 </html>
